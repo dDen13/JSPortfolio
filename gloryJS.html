@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слава Україні</title>
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <style>
+        *{
+            text-align: center;
+        } 
+        div{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function diapozon(){
+            let number=+document.qef.amount.value;
+            let answer=document.getElementById("enter")
+            let string=""
+            let string1=''
+for(let count = 1; count <= number; count++){
+    string+=`<ul>${count}. Glory to Ukraine!</ul>`
+}
+string1=`Glory to heroes ${number} times!`
+answer.innerHTML=string
+answer.innerHTML+=string1
+        }
+        
+    </script>
+         <div>
+            <p>Скільки словосполучень хочете продублювати?</p>
+            <form name="qef" action="javascript:diapozon()">
+            <input class="cqe" name="amount" type="text" value="100" size="4">
+            <input class="btn" type="submit" value="Ввести кількість">
+            </form>
+             <span id="enter"></span>
+            </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliments</title>
+    <link rel="stylesheet" href="works.css"> 
+    <style>
+        *{
+            text-align: center;
+        }
+        div{
+            margin: auto;
+        }
+       
+    </style>  
+</head>
+<body>
+    <script>
+           function kompliments(){
+            
+           let compliments=["smart","clever","nice","happy","amazing","strong","attractive","kind","genius","brilliant", "creative", "inspiring", "talented", "thoughtful", "determined", 
+           "generous", "remarkable","inspiring",  "talented",  "radiant",  "charming",  "creative",  "caring",  "brilliant",   "generous",  "thoughtful",  "empathetic",  "confident", 
+            "kind-hearted",  "supportive",  "admirable",  "unique",  "hilarious",  "hardworking",  "resourceful",  "gracious",  "loyal"]
+            let animals=["cat", "dog", "lion", "tiger", "elephant", "giraffe", "zebra", "monkey", "panda", "kangaroo", "koala", "fox", "wolf", "bear", "rabbit", "deer", 
+            "camel", "horse", "dolphin", "whale", "shark", "eagle", "hawk", "owl", "penguin", "parrot", "peacock", "frog", "turtle", "snake", "lizard", "crocodile", "octopus", "jellyfish", 
+            "antelope", "cheetah", "hippopotamus"]
+            let colors=["aliceblue", "antiquewhite", "aqua", "aquamarine", "azure", "beige", "bisque", "black", "blanchedalmond", "blue", "blueviolet", "brown", "burlywood", "cadetblue",
+             "chartreuse", "chocolate", "coral", "cornflowerblue", "cornsilk", "crimson", "cyan", "darkblue", "darkcyan", "darkgoldenrod", "darkgray", "darkgreen", "darkkhaki", "darkmagenta",
+              "darkolivegreen", "darkorange", "darkorchid", "darkred", "darksalmon", "darkseagreen", "darkslateblue", "darkslategray", "darkturquoise"]
+              let number=+document.qef.x.value;
+let answer=document.getElementById("enter")
+let string=""
+           for(let i=1;i<=number;i++){
+            let rand1=Math.floor(Math.random()*compliments.length) 
+            let rand2=Math.floor(Math.random()*animals.length)
+            let rand3=Math.floor(Math.random()*colors.length)
+          string+=(`<p style="color:${colors[rand3]}; backgroung-color:${colors[rand3]};">${i} You are so <span style="color:${colors[rand3]};">${compliments[rand1]} as ${animals[rand2]}
+            </span></p>`)  
+        }
+    answer.innerHTML=string
+}
+ </script>
+ <div>
+    <p>Введіть кількість компліментів</p>
+    <form name="qef" action="javascript:kompliments()">
+     <input class="cqe" name="x" type="text" value="" size="4">
+    <input class="btn" type="submit" value="Ввести">
+    </form>
+     <span id="enter"></span>
+    </div>
+</body>
+</html>

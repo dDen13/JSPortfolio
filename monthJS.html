@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місяць</title>
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <script>
+         function months(){
+            let month=+ document.qef.season.value;
+            let answer= document.getElementById("enter")
+switch(month){
+    case 12:
+     case 1:
+      case 2:
+      string=('Ви народилися зимою');
+break;
+case 3:
+    case 4:
+        case 5:
+        string=('Ви народилися весною');
+break;
+case 6:
+    case 7: 
+    case 8:
+    string=('Ви народилися влітку');
+break;
+case 9:
+    case 10:
+        case 11: 
+        string=('Ви народилися восени');
+break;
+default:
+string=('Це не місяць')
+}
+answer.innerHTML=string
+        }
+
+   
+        
+    </script>
+    <div>
+        <p>Введіть цифру місяця народження а я скажу яка це пора року</p>
+        <form name="qef" action="javascript:months()">
+        <input class="cqe" name="season" type="text" value="" size="4">
+        <input class="btn" type="submit" value="Впізнати свою пору року">
+        </form>
+         <span id="enter"></span>
+        </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <title>Емодзі</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        div{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function diapozon(){
+        let min=+document.qef.a.value
+            let max=+document.qef.b.value
+            let answer=document.getElementById("enter")
+            let string=""
+            if (min > max) {
+  let leveling = min;
+  min = max;
+  max = leveling;
+}
+for(let count = min; count <= max; count++){
+    string+=(`&#${count}; - &amp;${count}; <br>`)
+}
+
+answer.innerHTML=string 
+}
+    </script>
+    <div>
+        <p>Скільки емоцій хочете продублювати?</p>
+        <form name="qef" action="javascript:diapozon()">
+        Мінімальне <input class="cqe" name="a" type="text" value="128000" size="6">
+        Максимальне <input class="cqe" name="b" type="text" value="129000" size="6">
+        <input class="btn" type="submit" value="Ввести кількість">
+        </form>
+         <span id="enter"></span>
+        </div>
+</body>
+</html>

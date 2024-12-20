@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонаж</title>
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <style>
+      body{
+          display: flex;
+      }
+  </style>
+ </head>
+ <body>
+    <script>
+    function character(){
+    let characterName=document.qef.question.value;
+    let answer = document.getElementById('character')
+    if(characterName=='Деніел Крейг'){
+      string=('Так ви вгадали')
+    }
+    else if(characterName!='Деніел Крейг'){
+      string=('Ви не вгадали, героя звати Деніел Крейг')
+    }
+    answer.innerHTML = string;
+  }
+
+  </script>  
+   <div>
+    <p>Як звати актора який грав Джеймса Бонда у своєму фільмі?</p>
+    <form name="qef" action="javascript:character()">
+    <input class="cqe" name="question" type="text" value="Деніел Крейг" size="4">
+    <input class="btn" type="submit" value="Відправити">
+    </form>
+    <span id="character">Введіть ім'я та натисніть відправити</span>
+    </div>
+ </body>
+ </html>

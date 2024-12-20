@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банкомат</title>
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function atm(){
+            let money = +document.qef.sol.value;
+             let answer = document.getElementById("ATM");
+if (money < 50 || money > 3000){
+    string=('На жаль, ви можете зняти гроші від 50 грн до 3000 грн');
+}
+else if(money%50==0){
+    string=('Заберіть свої гроші у сумі '+money+' грн ');
+} 
+else{
+    string=(`Нажаль в банкоматі немає таких купюр, введіть будь ласка суму кратна 50`)
+}
+answer.innerHTML=string 
+        }
+        
+    </script>
+   <div>
+    <p>Введіть суму яку хочете зняти</p>
+    <form name="qef" action="javascript:atm()">
+    <input class="cqe" name="sol" type="text" value="50" size="4">
+    <input class="btn" type="submit" value="Забрати кошти">
+    </form>
+     <span id="ATM"></span>
+    </div>
+</body>
+</html>

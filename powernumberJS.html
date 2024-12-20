@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблиця степіня</title>
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <style>
+        *{
+            color: #ffffff;
+            font-size: 24px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ffffff;
+            padding: 8px;
+            text-align: center;
+        }
+
+        body{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+            <script>
+                for (let i = 1; i <= 10; i++) {
+                    for (let j = 1; j <= 10; j++) {
+                        document.write('<td>' + Math.pow(i,j) + '</td>');
+                    }
+                    document.write('</tr>');
+                }
+            </script>
+    </table>
+</body>
+</html>

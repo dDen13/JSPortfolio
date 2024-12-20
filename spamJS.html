@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спам</title>
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <script>
+  function findSpam(str) {
+    let lowCaseStr = str.toLowerCase();
+    return !!(~lowCaseStr.indexOf('безкоштовно') || ~lowCaseStr.indexOf('гарантія'));
+}
+
+function checkSpam() {
+    let userInput = document.qef.question.value;
+    let answer = document.getElementById('answer');
+    let isSpam = findSpam(userInput);
+    let result = `Перевірка на спам: ${isSpam ? 'Так, це спам' : 'Ні, це не спам'}`;
+    answer.innerHTML = result;
+}
+
+
+    </script>
+    <div>
+        <p>Введіть слово а я скажу чи це спам чи ні</p>
+        <form name="qef" action="javascript:checkSpam()">
+        <input class="cqe" name="question" type="text" value="Гарантія" size="4">
+        <input class="btn" type="submit" value="Відправити">
+        </form>
+        <span id="answer"></span>
+        </div>
+</body>
+</html>

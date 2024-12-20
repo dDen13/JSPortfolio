@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Факторіал</title>
+    <link rel="stylesheet" type="text/css" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function Factorial(){
+            let number=+document.qef.Number.value;
+        let factorial=1
+        let answer=document.getElementById("enter")
+        for(let i= 1; i <= number; i++){
+            factorial *= i
+        }
+        string=(`Факторіал вашого числа: ${factorial}`)
+        answer.innerHTML=string
+        }
+
+    </script>
+    <div>
+        <p>Введіть число для факторіалу</p>
+        <form name="qef" action="javascript:Factorial()">
+         <input class="cqe" name="Number" type="text" value="3" size="4">
+        <input class="btn" type="submit" value="Ввести">
+        </form>
+         <span id="enter"></span>
+        </div>
+</body>
+</html>

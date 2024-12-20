@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бобри</title>
+    <link rel="stylesheet" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function findAllOccurrences() {
+    let substring = document.qef.x.value;
+    let string = "Бредуть бобри в сири бори. Бобри хоробрі, а для бобрят ласкаві.";
+    let positions = [];
+    let position = string.length;
+
+    while ((position = string.lastIndexOf(substring, position - 1)) !== -1) {
+        positions.push(position);
+    }
+
+    let answer = document.getElementById("enter");
+    answer.innerHTML = "Позиції: " + positions.join(", ");
+}
+
+
+    </script>
+    <div>
+        <p>Введіть символ(и) які хочете знайти з тексту "бредуть бобри в сирі бори. бобри хоробрі, а для бобрят добрі"</p>
+        <form name="qef" action="javascript:findAllOccurrences()">
+        <input class="cqe" name="x" type="text" value="ри" size="4">
+        <input class="btn" type="submit" value="Знайти">
+        </form>
+         <span id="enter"></span>
+        </div>
+</body>
+</html>

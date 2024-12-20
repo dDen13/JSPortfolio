@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сума дробових чисел</title>
+    <link rel="stylesheet" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function sol(){
+            let x =+document.qef.x.value;
+let y =+document.qef.y.value;
+let sum=x+y
+let string=""
+let answer=document.getElementById("enter")
+if((x>0 && x < 1) && (y>0 && y< 1)){
+    string=`Сума цих чисел =  ${sum.toFixed(1)}`;
+}else{
+    string=`Ви ввели числа не з діапозону`
+}
+answer.innerHTML=string
+        }
+    </script>
+       <div>
+        <p>Введіть числа від 0 до 1 а я зроблю іхню суму</p>
+        <form name="qef" action="javascript:sol()">
+        1 число <input class="cqe" name="x" type="text" value="0.1" size="4">
+        2 число <input class="cqe" name="y" type="text" value="0.2" size="4">
+        <input class="btn" type="submit" value="Ввести">
+        </form>
+         <span id="enter"></span>
+        </div>
+</body>
+</html>

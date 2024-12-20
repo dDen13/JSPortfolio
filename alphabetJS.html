@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алфавіт</title>
+    <link rel="stylesheet" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function alphabet(){
+            let ukrAlphabet = ['а', 'б', 'в', 'г', 'ґ', 'д', 'е', 'є', 'ж', 'з', 'и', 'і', 'ї', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ь', 'ю', 'я']
+let userLetter =document.qef.a.value;
+let position = 0
+let answer=document.getElementById('enter')
+ukrAlphabet.indexOf(userLetter)
+if (position === 0) { 
+    string = `Літера "${userLetter}" не знайдена в українському алфавіті.`;
+ } 
+else {
+     string=(`${userLetter} знаходиться на позиції ${ukrAlphabet.indexOf(userLetter)+1}`)
+     }
+
+   
+
+answer.innerHTML=string
+        }
+        
+    </script>
+        <div>
+            <p>Введіть букву для пошуку</p>
+            <form name="qef" action="javascript:alphabet()">
+                <input class="cqe" name="a" type="text" value="" size="4">
+                <input class="btn" type="submit" value="Ввести">
+                </form>
+                <span id="enter"></span>
+        </div>
+</body>
+</html>

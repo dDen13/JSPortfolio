@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Діскрімінант</title>
+    <link rel="stylesheet" href="works.css">
+    <style>
+        body{
+            display: flex;
+        }
+        .cqe{
+  width: 100px;
+height: 30px;
+font-size: 24px;
+text-align: center;
+
+}
+    </style>
+</head>
+<body>
+    <script>
+
+        function qe() {
+          let a = document.qef.a.value;
+          let b = document.qef.b.value;
+          let c = document.qef.c.value;
+          let sol = document.getElementById("qe_sol");
+        
+            let D, x1, x2; 
+            D = b**2 - 4*a*c;
+            x1 = ( -b + Math.sqrt(D) ) / (2*a); 
+            x2 = ( -b - Math.sqrt(D) ) / (2*a); 
+            if ( D > 0 ) {
+                
+                string="x1 = " + x1 + " x2 = " + x2 
+        
+          }
+            else if ( D == 0 ) {
+                string= "x = " + x1 ; 
+            }
+            else {
+                string= "квадратне рівняння коренів не має!" ;
+            } 
+        
+        
+          sol.innerHTML = string;
+        }
+        
+            
+            </script>
+             <div>
+                <p>Розв'язок квадратного рівняння a·x² + b·x + c = 0</p>
+                <form name="qef" action="javascript:qe()">
+                a <input class="cqe" name="a" type="text" value="1" size="4">
+                b <input class="cqe" name="b" type="text" value="2" size="4">
+                c <input class="cqe" name="c" type="text" value="-3" size="4">
+                <input class="btn" type="submit" value="Розрахувати">
+                </form>
+                Рішення: <span id="qe_sol">Введить коефіцієнти та натисніть "Розрахувати"</span>
+                </div>
+</body>
+</html>
